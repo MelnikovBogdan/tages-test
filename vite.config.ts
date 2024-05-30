@@ -9,6 +9,7 @@ export default defineConfig({
     vue(),
     mkcertPlugin(),
   ],
+  base: '/tages-test/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

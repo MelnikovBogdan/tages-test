@@ -35,6 +35,11 @@ const routes: Array<RouteRecordRaw> = [
       breadcrumbs: ['main', 'storage-systems', 'shelving-kits'],
     },
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    redirect: { name: 'shelving-kits' },
+  },
 ]
 
 export default routes
