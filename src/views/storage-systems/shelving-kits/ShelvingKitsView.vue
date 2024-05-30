@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import meterialsData from 'static/json/meterials.json'
-import itemsData from 'static/json/items.json'
+import itemsData from '@/assets/json/items.json'
+import materialsData from '@/assets/json/meterials.json'
 import VListbox from '@/components/VListbox.vue'
 import type { Item } from '@/types/item'
 import ItemCard from '@/views/storage-systems/shelving-kits/components/ItemCard.vue'
@@ -34,7 +34,7 @@ const filter = ref<Filter>({
   material: undefined,
 })
 
-const materials: Array<Material> = meterialsData
+const materials: Array<Material> = materialsData
 const items = ref<Array<Item>>(itemsData)
 
 // COMPUTED
