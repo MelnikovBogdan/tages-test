@@ -3,26 +3,27 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import ShelvingKitsView from '@/views/storage-systems/shelving-kits/ShelvingKitsView.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/',
-  //   name: 'main',
-  //   component: MainView,
-  //   meta: {
-  //     title: 'Главная',
-  //     layout: DefaultLayout,
-  //     breadcrumbs: ['main'],
-  //   },
-  // },
-  // {
-  //   path: '/storage-systems',
-  //   name: 'storage-systems',
-  //   component: StorageSystemsView,
-  //   meta: {
-  //     title: 'Системы хранения',
-  //     layout: DefaultLayout,
-  //     breadcrumbs: ['main', 'storage-systems'],
-  //   },
-  // },
+  // This is the root path, but for test it is the route with /main path
+  {
+    path: '/main',
+    name: 'main',
+    redirect: { name: 'shelving-kits' },
+    meta: {
+      title: 'Главная',
+      layout: DefaultLayout,
+      breadcrumbs: ['main'],
+    },
+  },
+  {
+    path: '/storage-systems',
+    name: 'storage-systems',
+    redirect: { name: 'shelving-kits' },
+    meta: {
+      title: 'Системы хранения',
+      layout: DefaultLayout,
+      breadcrumbs: ['main', 'storage-systems'],
+    },
+  },
   // /storage-systems/shelving-kits
   {
     path: '/',
